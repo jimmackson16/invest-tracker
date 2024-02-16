@@ -61,8 +61,8 @@ export async function POST(req: Request) {
       clerkId:id,
       email: email_addresses[0].email_address,
       // exclamation mark means it can sometimes be null
-      firstName: first_name,
-      lastName: last_name,
+      firstName: first_name!,
+      lastName: last_name!,
     }
 
     const newUser = await createUser(user)
